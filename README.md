@@ -1,14 +1,37 @@
 # Stego_tool
 
-This project is a toolbox of different steganography methods, beginning with trailer based and then moving to LSB (least significant bit) and then pallette based steganography. For each technique I have encapsulated a class to hold the functions that input/extract text, images and files.
+Overview
+Stego_tool is a Python-based tool for steganography, the art of hiding information within other non-secret data. This tool allows users to embed and extract hidden messages within image files using various steganographic techniques.
 
-I decided to write this in python due to its huge range of libraries and how easy it is to read/write from files.
+Features
+Image Steganography: Embed secret messages within image files.
+Multiple Techniques: Supports various steganographic techniques for hiding data.
+User-Friendly Interface: Easy-to-use command-line interface for embedding and extracting messages.
+Cross-Platform: Works on Windows, macOS, and Linux.
 
-Trailer based:
-This is where the data is written to or read from the end of the image, after the magic bytes.
+Installation
+Clone the repository:
+git clone https://github.com/JaydenS-53/Stego_tool.git
 
-Least Significant bit:
-This is where data is embedded into the last bit of the 8 bit binary patterns of the image.
+Navigate to the project directory:
+cd Stego_tool
 
-Pallette Based:
-This changes the images pixel colours slightly to store the data, the changes are litle enough to be hidden from the human eye, but with larger files this can be noticable.
+Install the required dependencies:
+pip install -r requirements.txt
+
+Usage:
+Embedding a Message
+To embed a message in an image file, use the following command:
+
+python stego_tool.py embed -i input_image.jpg -m "Your secret message" -o output_image.png
+Replace input_image.jpg with the path to your original image, "Your secret message" with the message you want to hide, and output_image.png with the desired name for the new image.
+
+Extracting a Message
+To extract a hidden message from an image file, use the following command:
+
+python stego_tool.py extract -i stego_image.png -o extracted_message.txt
+Replace stego_image.png with the path to the image containing the hidden message, and extracted_message.txt with the desired name for the extracted message file.
+
+Supported Techniques
+Least Significant Bit (LSB) Steganography
+Trailer Based Steganography
