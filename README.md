@@ -19,19 +19,6 @@ cd Stego_tool
 Install the required dependencies:
 pip install -r requirements.txt
 
-Usage:
-Embedding a Message
-To embed a message in an image file, use the following command:
-
-python stego_tool.py embed -i input_image.jpg -m "Your secret message" -o output_image.png
-Replace input_image.jpg with the path to your original image, "Your secret message" with the message you want to hide, and output_image.png with the desired name for the new image.
-
-Extracting a Message
-To extract a hidden message from an image file, use the following command:
-
-python stego_tool.py extract -i stego_image.png -o extracted_message.txt
-Replace stego_image.png with the path to the image containing the hidden message, and extracted_message.txt with the desired name for the extracted message file.
-
 Supported Techniques
 Least Significant Bit (LSB) Steganography
 Trailer Based Steganography
